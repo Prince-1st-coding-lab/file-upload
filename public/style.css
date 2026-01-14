@@ -1,0 +1,328 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #d4e5fc 0%, #d8dcf8 50%, #e8d4f4 100%);
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    /* Upload Zone */
+    .upload-zone {
+      background: #ffffff;
+      border: 2px dashed #c5cee0;
+      border-radius: 20px;
+      padding: 48px 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .upload-zone:hover {
+      border-color: #5a4fcf;
+      box-shadow: 0 8px 30px rgba(90, 79, 207, 0.15);
+    }
+
+    .upload-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(90, 79, 207, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .upload-icon svg {
+      width: 28px;
+      height: 28px;
+      color: #5a4fcf;
+    }
+
+    .upload-text {
+      font-size: 16px;
+      color: #1a1f36;
+      margin-bottom: 8px;
+    }
+
+    .upload-text a {
+      color: #5a4fcf;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .upload-text a:hover {
+      text-decoration: underline;
+    }
+
+    .upload-formats {
+      font-size: 14px;
+      color: #8492a6;
+    }
+
+    .doc-icon {
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .doc-icon .hand {
+      font-size: 20px;
+    }
+
+    .doc-box {
+      width: 40px;
+      height: 48px;
+      border: 1.5px solid rgba(26, 31, 54, 0.3);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 6px;
+    }
+
+    .doc-line {
+      width: 18px;
+      height: 3px;
+      background: rgba(26, 31, 54, 0.3);
+      border-radius: 2px;
+    }
+
+    .doc-line.short {
+      width: 10px;
+    }
+
+    .doc-label {
+      font-size: 7px;
+      font-weight: 700;
+      color: rgba(26, 31, 54, 0.5);
+      margin-top: 2px;
+    }
+
+    /* File Cards */
+    .file-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .file-card {
+      background: #ffffff;
+      border-radius: 50px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .file-card.success {
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
+    }
+
+    .file-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .file-icon.primary {
+      background: rgba(90, 79, 207, 0.1);
+    }
+
+    .file-icon.primary svg {
+      color: #5a4fcf;
+    }
+
+    .file-icon.error {
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .file-icon.error svg {
+      color: #ef4444;
+    }
+
+    .file-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .file-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .file-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .file-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1f36;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .file-action {
+      flex-shrink: 0;
+    }
+
+    .btn-icon {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+    }
+
+    .btn-icon:hover {
+      opacity: 0.7;
+    }
+
+    .btn-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-icon.delete {
+      color: rgba(26, 31, 54, 0.5);
+    }
+
+    .btn-icon.delete-error {
+      color: #ef4444;
+    }
+
+    .check-badge {
+      width: 24px;
+      height: 24px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .check-badge svg {
+      width: 14px;
+      height: 14px;
+      color: white;
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+      height: 8px;
+      background: #e8edf3;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .progress-fill.primary {
+      background: #5a4fcf;
+    }
+
+    .progress-fill.success {
+      background: #22c55e;
+    }
+
+    .progress-fill.error {
+      background: #ef4444;
+    }
+
+    /* Status Row */
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .status-text {
+      color: #8492a6;
+    }
+
+    .status-text.success {
+      color: #22c55e;
+      font-weight: 500;
+    }
+
+    .status-text.error {
+      color: #ef4444;
+    }
+
+    .status-percent {
+      font-weight: 500;
+      color: #1a1f36;
+    }
+
+    .btn-retry {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: none;
+      border: none;
+      color: #5a4fcf;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      transition: opacity 0.2s;
+    }
+
+    .btn-retry:hover {
+      opacity: 0.8;
+    }
+
+    .btn-retry svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Hidden file input */
+    .file-input {
+      display: none;
+    }
