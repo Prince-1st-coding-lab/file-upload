@@ -44,6 +44,9 @@ async function uploadFile() {
     let file_cards = document.querySelector('.file-cards');
     file_cards.append(file_card_success);
 
+    console.log(data);
+    
+
   } catch (error) {
     console.log(error);    
   }

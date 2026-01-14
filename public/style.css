@@ -326,3 +326,10 @@
     .file-input {
       display: none;
     }
+    footer{
+      position: fixed;
+      top: 45rem;
+      z-index: -1;
+      font-size: 2rem;
+      left: 85rem;
+    }
